@@ -1,0 +1,230 @@
+//Ex. 1
+const arr = [1, 1, 3, 3, 4];
+const uniqueValues = [];
+
+
+for (let i = 0; i < arr.length; i++) {
+for (let j= 0; j< arr.length; j++) {
+if (arr[i] === arr[j] && i != j) {
+break;
+} else if (j == arr.length - 1) {
+uniqueValues.push(arr[i]);
+}
+}
+}
+
+console.log(uniqueValues);
+
+//Ex. 2
+const arr = [14, 28, 3, 8, 2];
+const minAndMax = [];
+
+let minValue = arr[0];
+let maxValue = arr[0];
+
+for (let i = 0; i < arr.length; i++) {
+if (arr[i] < minValue) {
+minValue = arr[i];
+}
+}
+
+for (let i = 0; i < arr.length; i++) {
+if (arr[i] > maxValue) {
+maxValue = arr[i];
+}
+}
+
+minAndMax.push(minValue, maxValue);
+console.log(minAndMax);
+
+
+// Ex. 3
+
+const arr = [14, 28, 3, 8, 2];
+
+const odds = [];
+const evens = [];
+
+for (let i = 0; i < arr.length; i++) {
+if (arr[i] % 2 === 0) {
+evens.push(arr[i]);
+} else {
+odds.push(arr[i]);
+}
+}
+
+console.log("odds ", odds);
+console.log("evens ",evens)
+
+// Ex. 4
+
+const arr = [14, 28, "3", 8, 2];
+
+const numbers = [];
+const strings = [];
+
+for (let i = 0; i < arr.length; i++) {
+if (typeof(arr[i]) === "number") {
+numbers.push(arr[i]);
+} else if (typeof(arr[i]) === "string") {
+strings.push(arr[i]);
+}
+}
+
+console.log("numbers ", numbers);
+console.log("strings ", strings)
+
+
+// Ex. 5
+
+const evenFrom = []
+console.log(calcevens(12,20));
+
+function calcevens (a,b) {
+for (let i = a+1; i < b; i++) {
+if (i % 2 === 0) {
+evenFrom.push(i);
+ } else if (i % 2 === 1 && evenFrom.length ===0 && b - a <= 2 ) {
+ return "there are no even numbers";
+ }
+}
+return evenFrom;
+}
+
+// Ex. 6
+
+let num = -9;
+const numberSplit = [];
+console.log (splitTheNumber(num));
+
+
+function splitTheNumber (num) {
+let a = Math.floor(num / 2);
+let b = num - a;
+numberSplit.push(a,b);
+return numberSplit;
+}
+
+// Ex. 7.
+const arr = [2,3,5,6,7];
+
+const reversed = [];
+
+
+function getReverse(arr) {
+for (let i = arr.length -1 ; i >= 0; i--) {
+reversed.push(arr[i]);
+}
+return reversed;
+}
+
+console.log(getReverse(arr));
+
+
+// Ex. 8.
+const arr = [2,-3,-2,0,-1];
+
+let totalPositives = 0;
+let totalNegatives = 0;
+
+function comparePosNeg(arr) {
+for (let i = 0; i < arr.length; i++) {
+if (arr[i] >= 0) {
+totalPositives++;
+} else {
+totalNegatives++;
+}
+
+}
+return totalPositives > totalNegatives;
+}
+
+console.log(comparePosNeg(arr));
+
+// Ex. 9 
+const arr = [1, 1, 3, 3, 4];
+const uniqueValues = [];
+
+
+function findUniques (arr) {
+for (let i = 0; i < arr.length; i++) {
+for (let j= 0; j< arr.length; j++) {
+if (arr[i] === arr[j] && i != j) {
+break;
+} else if (j == arr.length - 1) {
+uniqueValues.push(arr[i])
+}
+}
+}
+return uniqueValues;
+}
+
+
+console.log(findUniques(arr));
+
+
+// Ex. 10.
+const arr1 = ["dog", "cat", "parrot"];
+const arr2 = ["lizard", "rat", "cat"];
+const CommonElements = [];
+
+
+function findCommonElements (arr1, arr2) {
+for (let i = 0; i < arr1.length; i++) {
+for (let j= 0; j< arr2.length; j++) {
+if (arr1[i] === arr2[j]) {
+CommonElements.push(arr1[i]);
+}
+}
+}
+return CommonElements;
+}
+
+console.log(findCommonElements(arr1,arr2));
+
+
+// 10-1
+
+const arr1 = [3, 5];
+const arr2 = [3, 4];
+
+function compareArrs (arr1, arr2) {
+for (let i = 0; i < arr1.length; i++) {
+for (let j = 0; j < arr2.length; j++) {
+return arr1[i] === arr2[j];
+}
+} 
+}
+
+console.log (compareArrs (arr1, arr2));
+
+
+
+// 11
+const arr = ["Apple", "Dell", 9, 2, 4, "HP"];
+const nums = [];
+const strings = [];
+for (let i = 0; i < arr.length; i++) {
+if (typeof arr[i] === "number") {
+nums.push(arr[i]);
+} else if (typeof arr[i] === "string") {
+strings.push(arr[i]);
+}
+}
+
+console.log(nums);
+console.log(strings);
+
+// Ex. 12
+
+let str = "Armenia";
+let reversedString = ""
+function reverseTheString () {
+for (let i = str.length - 1; i >= 0; i--) {
+reversedString += str[i];
+}
+return reversedString;
+}
+
+
+console.log(reverseTheString (str));
